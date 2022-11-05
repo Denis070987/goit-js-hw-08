@@ -23,7 +23,7 @@ function creatGallery(galleryItems) {
 const addGallery = creatGallery(galleryItems);
 divGallery.innerHTML = addGallery;
 
-const SimpleLightbox = require('simplelightbox')
+
     new SimpleLightbox('.gallery__item a', {captionsData: "alt"});
 
 
