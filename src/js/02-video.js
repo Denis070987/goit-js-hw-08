@@ -9,7 +9,6 @@ player.on('timeupdate', throttle(onPlay, 1200));
 function onPlay({ seconds }) {
   localStorage.setItem('videoplayer-current-time', seconds);
 }
-player.setCurrentTime(localStorage.getItem('videoplayer-current-time'));
-
-
-         
+if (localStorage.getItem('videoplayer-current-time')) {
+  player.setCurrentTime(localStorage.getItem('videoplayer-current-time'))
+}
